@@ -15,8 +15,6 @@ export const siteTitle = "SIMP - Self Improvement Management Planner";
 
 export default function Layout({ children, home }: Props) {
   const { data: session } = useSession();
-  console.log(`session: ${JSON.stringify(session)}`);
-  console.log(`user: ${JSON.stringify(session?.user)}`);
   return (
     <>
       <div className={styles.nav}>
