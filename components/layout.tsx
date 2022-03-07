@@ -9,8 +9,6 @@ type Props = {
   children: JSX.Element;
   home?: boolean;
 };
-
-const name = "Scott Rafael";
 export const siteTitle = "SIMP - Self Improvement Management Planner";
 
 export default function Layout({ children, home }: Props) {
@@ -29,7 +27,7 @@ export default function Layout({ children, home }: Props) {
                   className={utilStyles.borderCircle}
                   height={40}
                   width={40}
-                  alt={name}
+                  alt={session.user?.name || ""}
                 />
               ) : (
                 session.user?.name
@@ -45,7 +43,7 @@ export default function Layout({ children, home }: Props) {
         <Head>
           <link rel="icon" href="/favicon.ico" />
           <meta
-            name="SIMP - Self Improvement Management Planner"
+            name={siteTitle}
             content="Continous growth and learning directed at code and life improvement."
           />
           <meta
