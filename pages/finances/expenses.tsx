@@ -6,7 +6,7 @@ export default function Expenses() {
     <Layout>
       <>
         <Head>
-          <title>SIMP - Expenses</title>
+          <title>SIMP - Finances - Expenses</title>
         </Head>
         <h1>Expenses</h1>
       </>

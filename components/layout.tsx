@@ -71,9 +71,9 @@ export default function Layout({ children, home }: Props) {
                     Home
                   </Button>
                 </Link>
-                <Link href="/expenses/expenses" passHref>
+                <Link href="/finances" passHref>
                   <Button fullWidth={true} component="a">
-                    Expenses
+                    Finances
                   </Button>
                 </Link>
               </div>

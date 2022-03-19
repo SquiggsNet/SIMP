@@ -1,35 +1,36 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import Image from "next/image";
 import Layout, { siteTitle } from "../components/Layout";
-import utilStyles from "../styles/utils.module.scss";
 import { useSession } from "next-auth/react";
+import { Image, Text, Title } from "@mantine/core";
 
 const Home: NextPage = () => {
   const { data: session } = useSession();
   const profilePic = session?.user?.image || "/images/profile.jpg";
   const name = session?.user?.name || "/images/profile.jpg";
   return (
-    <Layout home>
-      <>
+    <Layout>
+      <div
+        style={{
+          display: "flex",
+          gap: "10px",
+          flexDirection: "column",
+          alignItems: "center"
+        }}
+      >
         <Head>
           <title>{siteTitle}</title>
         </Head>
-        <header className={utilStyles.header}>
-          <Image
-            priority
-            src={profilePic}
-            className={utilStyles.borderCircle}
-            height={144}
-            width={144}
-            alt={name}
-          />
-          <h1 className={utilStyles.heading2Xl}>{name}</h1>
-        </header>
-        <section className={utilStyles.headingMd}>
-          <p>Getting it done</p>
-        </section>
-      </>
+        <Image
+          src={profilePic}
+          height={250}
+          width={250}
+          radius="xl"
+          alt={name}
+        />
+        <Title order={2}>{name}</Title>
+        <Text size="sm">Insert Motivational Line Here</Text>
+      </div>
     </Layout>
   );
 }
