@@ -1,8 +1,8 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import Layout, { siteTitle } from "../components/Layout";
 import { useSession } from "next-auth/react";
 import { Image, Text, Title } from "@mantine/core";
+import Layout, { siteTitle } from '../components/layout';
 
 const Home: NextPage = () => {
   const { data: session } = useSession();
