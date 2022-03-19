@@ -15,11 +15,10 @@ import { useSession, signIn, signOut } from "next-auth/react";
 
 type Props = {
   children: JSX.Element;
-  home?: boolean;
 };
 export const siteTitle = "SIMP - Self Improvement Management Planner";
 
-export default function Layout({ children, home }: Props) {
+export default function Layout({ children }: Props) {
   const { data: session } = useSession();
   const [opened, setOpened] = useState(false);
   const theme = useMantineTheme();

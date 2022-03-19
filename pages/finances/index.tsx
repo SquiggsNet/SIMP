@@ -1,6 +1,6 @@
 import Head from "next/head";
-import Layout from "./../../components/Layout";
 import { Text, Title } from "@mantine/core";
+import Layout from "../../components/Layout";
 
 export default function Finances() {
   return (
