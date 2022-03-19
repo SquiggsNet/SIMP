@@ -1,9 +1,7 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import Link from 'next/link';
 import Image from "next/image";
-import Layout, { siteTitle } from "../components/layout";
-import styles from "../components/layout.module.scss";
+import Layout, { siteTitle } from "../components/Layout";
 import utilStyles from "../styles/utils.module.scss";
 import { useSession } from "next-auth/react";
 
@@ -17,7 +15,7 @@ const Home: NextPage = () => {
         <Head>
           <title>{siteTitle}</title>
         </Head>
-        <header className={styles.header}>
+        <header className={utilStyles.header}>
           <Image
             priority
             src={profilePic}
@@ -30,9 +28,6 @@ const Home: NextPage = () => {
         </header>
         <section className={utilStyles.headingMd}>
           <p>Getting it done</p>
-          <Link href="/expenses/expenses">
-            <a>Expenses</a>
-          </Link>
         </section>
       </>
     </Layout>
